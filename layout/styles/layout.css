@@ -82,7 +82,7 @@ File: Layout CSS
 /* Content */
 .container .content{}
 
-.sectiontitle{display:block; max-width:55%; margin:0 auto 80px; text-align:center;}
+.sectiontitle{display:block; max-width:55%; margin:0 auto 10px; text-align:center;}
 .sectiontitle *{margin:0;}
 
 .grid-3 > li{margin-bottom:50px;}
@@ -155,6 +155,9 @@ File: Layout CSS
 .sidebar .sdb_holder:last-child{margin-bottom:0;}
 
 
+
+
+
 /* Footer
 --------------------------------------------------------------------------------------------------------------- */
 #footer{padding:80px 0 50px;}
@@ -217,8 +220,10 @@ Delete it completely to stop fading
 --------------------------------------------------------------------------------------------------------------- */
 nav ul, nav ol{margin:0; padding:0; list-style:none;}
 
-#mainav, #breadcrumb, .sidebar nav{line-height:normal;}
-#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family:"Font Awesome 5 Free"; font-weight:900; font-size:10px; line-height:10px;}
+#mainav, #breadcrumb, .sidebar, .sidebar1  nav{line-height:normal;}
+#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar   nav a::after{position:absolute; font-family:"Font Awesome 5 Free"; font-weight:900; font-size:10px; line-height:10px;}
+#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar1   nav a::after{position:absolute; font-family:"Font Awesome 5 Free"; font-weight:900; font-size:10px; line-height:10px;}
+
 
 /* Top Navigation */
 #mainav{}
@@ -262,6 +267,15 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 .sidebar nav ul ul a::after{left:25px;}
 .sidebar nav ul ul ul a{padding-left:55px;}
 .sidebar nav ul ul ul a::after{left:45px;}
+
+.sidebar1 nav {display:block; width:100%;}
+.sidebar1 nav li{margin:0 0 3px 0; padding:0;}
+.sidebar1 nav a{display:block; position:relative; margin:0; padding:5px 10px 5px 15px; text-decoration:none; border-width:0 0 1px 0;}
+.sidebar1 nav a::after{top:10px; left:5px; content:"\f0da";}
+.sidebar1 nav ul ul a{padding-left:35px;}
+.sidebar1 nav ul ul a::after{left:25px;}
+.sidebar1 nav ul ul ul a{padding-left:55px;}
+.sidebar1 nav ul ul ul a::after{left:45px;}
 
 /* Pagination */
 .pagination{display:block; width:100%; text-align:center; clear:both;}
@@ -328,7 +342,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#0b6c29 !important;}
 
 .overlay{color:#FFFFFF; background-color:inherit;}
 .overlay::after{color:inherit; background-color:rgba(0,0,0,.55);}
-.overlay.light{color:#474747;}
+.overlay.light{color:#474747b0;}
 .overlay.light::after{background-color:rgba(255,255,255,.7);}
 
 .btn, .btn.inverse:hover{color:#FFFFFF; background-color:#0b6c29; border-color:#0b6c29;}
@@ -356,7 +370,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#0b6c29 !important;}
 
 
 /* Contact Details */
-#ctdetails ul li div i{color:inherit; background-color:rgba(0,0,0,.03);}
+#ctdetails ul li div i{color:inherit; background-color:rgba(163, 22, 22, 0.03);}
 #ctdetails ul li div:hover i{color:#FFFFFF; background-color:#0b6c29;}
 
 
@@ -375,7 +389,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#0b6c29 !important;}
 #services article{border-color:rgba(0,0,0,.05);}
 #services article:hover{color:inherit; background-color:rgba(0,0,0,.02);}
 
-#testimonials article{color:#474747; background-color:#FFFFFF;}
+#testimonials article{color:#110f0f; background-color:#FFFFFF;}
 #testimonials article blockquote::before{color:rgba(0,0,0,.05);}
 
 #latest article figure figcaption .meta li{border-color:rgba(0,0,0,.1);}
@@ -386,7 +400,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#0b6c29 !important;}
 #footer hr, #footer .borderedbox, #footer .linklist li{border-color:rgba(255,255,255,.1);}
 
 #footer input, #footer button{border-color:transparent;}
-#footer input{color:#FFFFFF; background-color:rgba(255,255,255,.2);}
+#footer input{color:#FFFFFF; background-color:rgb(255, 255, 255);}
 #footer input:focus{background-color:#0b6c29;}
 #footer button{color:#FFFFFF; background-color:#0b6c29;}
 #footer button:hover{color:inherit; background-color:transparent; border-color:inherit;}
@@ -412,6 +426,9 @@ input:focus, textarea:focus, *:required:focus{border-color:#0b6c29 !important;}
 .container .sidebar nav a{color:inherit; border-color:#D7D7D7;}
 .container .sidebar nav a:hover{color:#0b6c29;}
 
+.container .sidebar1 nav a{color:inherit; border-color:#D7D7D7;}
+.container .sidebar1 nav a:hover{color:#0b6c29;}
+
 .pagination a, .pagination strong{border-color:#D7D7D7;}
 .pagination .current *{color:#FFFFFF; background-color:#0b6c29;}
 
@@ -419,11 +436,18 @@ input:focus, textarea:focus, *:required:focus{border-color:#0b6c29 !important;}
 
 
 /* Tables + Comments */
-table, th, td, #comments .avatar, #comments input, #comments textarea{border-color:#D7D7D7;}
+table, th, td, #comments .avatar, #comments input, #comments textarea{color: black;border-bottom: 1px solid rgb(0, 0, 0);}
 th{color:#FFFFFF; background-color:#373737;}
-tr, #comments li, #comments input[type="submit"], #comments input[type="reset"]{color:inherit; background-color:#FBFBFB;}
-tr:nth-child(even), #comments li:nth-child(even){color:inherit; background-color:#F7F7F7;}
+tr, #comments li, #comments input[type="submit"], #comments input[type="reset"]{color:inherit;}
+tr:nth-child(even), #comments li:nth-child(even){color:inherit; }
 table a, #comments a{background-color:inherit;}
+
+
+table.center {
+	margin-left: auto; 
+	margin-right: auto;
+	
+  }
 
 
 /* ------------------------------------------------------------------------------------------------------------ */
@@ -441,7 +465,7 @@ table a, #comments a{background-color:inherit;}
 /* Max Wrapper Width - Laptop, Desktop etc.
 --------------------------------------------------------------------------------------------------------------- */
 @media screen and (min-width:1140px){
-	.hoc{max-width:1140px;}
+	.hoc{max-width:1740px;}
 }
 
 @media screen and (min-width:978px) and (max-width:1140px){
@@ -518,9 +542,9 @@ table a, #comments a{background-color:inherit;}
 
 /* Other
 --------------------------------------------------------------------------------------------------------------- */
-@media screen and (max-width:650px){
-	.scrollable{display:block; width:100%; margin:0 0 30px 0; padding:0 0 15px 0; overflow:auto; overflow-x:scroll;}
-	.scrollable table{margin:0; padding:0; white-space:nowrap;}
+@media screen and (max-width:750px){
+	.scrollable{display:block;  width:100%; margin:0 0 30px 0; padding:0 0 15px 0; overflow:auto; overflow-x:scroll;}
+	.scrollable table{margin:0; padding:0; color: black; white-space:nowrap;}
 
 	.inline li{display:block; margin-bottom:10px;}
 	.pushright li{margin-right:0;}
@@ -528,3 +552,155 @@ table a, #comments a{background-color:inherit;}
 	.font-x2{font-size:1.6rem;}
 	.font-x3{font-size:1.8rem;}
 }
+
+* {
+	box-sizing: border-box;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .containerp {
+	position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+	display: none;
+  }
+  .mySlides1 {
+	display: none;
+  }
+  .mySlides2 {
+	display: none;
+  }
+  .mySlides3 {
+	display: none;
+  }
+  .mySlides4 {
+	display: none;
+  }
+  .mySlides5 {
+	display: none;
+  }
+  .mySlides6 {
+	display: none;
+  }
+  .mySlides7 {
+	display: none;
+  } 
+  .mySlides8 {
+	display: none;
+  } 
+  .mySlides9 {
+	display: none;
+  } 
+  .mySlides10 {
+	display: none;
+  } 
+  .mySlides11 {
+	display: none;
+  } 
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+	cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+	cursor: pointer;
+	position: absolute;
+	top: 40%;
+	width: auto;
+	padding: 16px;
+	margin-top: -50px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+	text-align: center;
+	background-color: #222;
+	padding: 2px 16px;
+	color: white;
+  }
+  
+  
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+	float: left;
+	width: 10%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+	opacity: 0.6;
+  }
+  .demo1 {
+	opacity: 0.6;
+  }
+  .demo2 {
+	opacity: 0.6;
+  }
+  .demo3 {
+	opacity: 0.6;
+  }
+  .demo4 {
+	opacity: 0.6;
+  }
+  .demo5 {
+	opacity: 0.6;
+  }
+  .demo6 {
+	opacity: 0.6;
+  }
+  .demo7 {
+	opacity: 0.6;
+  }
+  .demo8 {
+	opacity: 0.6;
+  }
+  .demo9 {
+	opacity: 0.6;
+  }
+  .demo10 {
+	opacity: 0.6;
+  }
+  .demo11 {
+	opacity: 0.6;
+  }
+  .active,
+  .demo:hover {
+	opacity: 1;
+  }

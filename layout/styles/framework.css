@@ -80,6 +80,11 @@ label{margin-bottom:5px;}
 h1, h2, h3, h4, h5, h6, .heading{margin:0 0 20px 0; font-size:1.4rem; line-height:normal; font-weight:normal; text-transform:capitalize;}
 .heading.nospace{margin-bottom:0;}
 
+/*h3{ 
+    color: rgb(172, 238, 151);
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(72, 255, 0), 0 0 5px rgb(14, 97, 18);
+  }
+
 address{font-style:normal; font-weight:normal;}
 hr{display:block; width:100%; height:1px; border:solid; border-width:1px 0 0 0;}
 
@@ -103,7 +108,7 @@ address, article, aside, figcaption, figure, footer, header, main, nav, section{
 
 /* Grid - RS-MQF 1140 V.2 - https://www.os-templates.com/free-basic-html5-templates/rs-mqf-1140
 --------------------------------------------------------------------------------------------------------------- */
-.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter{display:inline-block; float:left; margin:0 0 0 4.21052%; list-style:none;}
+.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter, .four_fifth, .one_fifth{display:inline-block; float:left; margin:0 0 0 4.21052%; list-style:none;}
 
 .first{margin-left:0; clear:left;}
 
@@ -112,6 +117,8 @@ address, article, aside, figcaption, figure, footer, header, main, nav, section{
 .one_half, .two_quarter{width:47.89473%;}
 .two_third{width:65.26315%;}
 .three_quarter{width:73.94736%;}
+.one_fifth{width:11%;}
+.four_fifth{width:84%;}
 
 
 /* Spacing
